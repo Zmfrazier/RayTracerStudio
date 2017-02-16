@@ -1,6 +1,6 @@
-#include "RayTracer.h"
+#include "RayTracer.hpp"
 
 int main(){
 	
-	return 0;
+  return 0;
 }
