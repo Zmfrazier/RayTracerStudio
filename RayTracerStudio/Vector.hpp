@@ -4,7 +4,6 @@
 class Vector{
 
 public:
-
   double x, y, z;
   Vector() : x(0), y(0), z(0) {}
 	

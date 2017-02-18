@@ -6,8 +6,8 @@ public:
   double r, g, b, a;
 
   Color() : r(0.0), g(0.0), b(0.0), a(1.0) {}
-  Color(double r, double g, double b) : r(r), g(g), b(b), a(1.0) {}
-  Color(double r, double g, double b, double a) : r(r), g(g), b(b), a(a) {}
+  Color(double red, double green, double blue) : r(r), g(g), b(b), a(1.0) {}
+  Color(double red, double green, double blue, double alpha) : r(red), g(green), b(blue), a(alpha) {}
 };
 
 #endif
