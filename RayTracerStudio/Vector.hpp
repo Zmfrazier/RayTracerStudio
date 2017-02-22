@@ -5,11 +5,38 @@ class Vector{
 
 public:
   double x, y, z;
+
   Vector() : x(0), y(0), z(0) {}
-	
+
+  Vector normalize();
+
   Vector cross(Vector const & v) const;
 
   double dot(Vector const & v) const;
+
+  Vector operator + (Vector const & v) const;
+
+  Vector& operator += (Vector const & v);
+
+  Vector operator - (Vector const & v) const;
+
+  Vector& operator -= (Vector const & v);
+
+  Vector operator * (Vector const & v) const;
+
+  Vector& operator *= (Vector const & v);
+
+  Vector operator / (Vector const & v) const;
+
+  Vector& operator /= (Vector const & v);
+
+  Vector operator * (double const s) const;
+
+  Vector& operator *= (double const s);
+
+  Vector operator / (double const s) const;
+
+  Vector& operator /= (double const s);
 };
 
 #endif
