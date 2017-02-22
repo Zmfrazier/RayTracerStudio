@@ -8,6 +8,8 @@ public:
 
   Vector() : x(0), y(0), z(0) {}
 
+  double length() const;
+
   Vector normalize();
 
   Vector cross(Vector const & v) const;

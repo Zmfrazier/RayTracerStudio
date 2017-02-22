@@ -1,4 +1,9 @@
+#include <math.h>
 #include "Vector.hpp"
+
+Vector Vector::length(){
+  return sqrt(x*x + y*y + z*z);
+}
 
 Vector Vector::normalize(){
   return (*this) /= this->length();
