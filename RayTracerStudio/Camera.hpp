@@ -5,11 +5,11 @@
 
 class Camera {
 public:
-   Vector position;
+  Vector position;
 
-   Camera() {
-      position = Vector(0.0, 0.0, 100.0);
-   }
+  Camera() {
+    position = Vector(0.0, 0.0, 100.0);
+  }
 };
 
 #endif
