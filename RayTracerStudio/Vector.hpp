@@ -16,27 +16,19 @@ public:
 
   Vector operator + (Vector const & v) const;
 
-  Vector& operator += (Vector const & v);
-
   Vector operator - (Vector const & v) const;
-
-  Vector& operator -= (Vector const & v);
 
   Vector operator * (Vector const & v) const;
 
-  Vector& operator *= (Vector const & v);
-
   Vector operator / (Vector const & v) const;
 
+  Vector& operator += (Vector const & v);
+
+  Vector& operator -= (Vector const & v);
+
+  Vector& operator *= (Vector const & v);
+
   Vector& operator /= (Vector const & v);
-
-  Vector operator * (double const s) const;
-
-  Vector& operator *= (double const s);
-
-  Vector operator / (double const s) const;
-
-  Vector& operator /= (double const s);
 };
 
 #endif
