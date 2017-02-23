@@ -12,8 +12,11 @@ public:
   std::vector<Object*> objects;
   std::vector<Light*> lights;
 
-  void addObject(*Object);
-  void addLight(*Light);
+  void
+  addObject(*Object);
+
+  void
+  addLight(*Light);
 
   RayTracer();
   ~RayTracer();

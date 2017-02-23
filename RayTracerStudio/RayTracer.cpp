@@ -1,9 +1,11 @@
 #include "RayTracer.hpp"
 
-void RayTracer::addObject(Object* object){
+void
+RayTracer::addObject(Object* object){
   objects.push_back(object);
 }
 
-void RayTracer::addLight(*Light light){
+void
+RayTracer::addLight(*Light light){
   lights.push_back(light);
 }
