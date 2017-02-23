@@ -33,7 +33,8 @@ public:
     screenWidth(s) 
     {calculateWUV();}
 
-  void calculateWUV();
+  void
+  calculateWUV();
 };
 
 #endif
