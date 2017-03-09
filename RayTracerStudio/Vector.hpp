@@ -6,8 +6,7 @@ class Vector{
 public:
   double x, y, z;
 
-  Vector()
-  : x(0), y(0), z(0) {}
+  Vector() : x(0), y(0), z(0) {}
 
   double
   length() const;
