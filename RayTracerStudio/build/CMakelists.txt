@@ -1,0 +1,16 @@
+project(RayTracerStudio CXX)
+
+cmake_minimum_required(VERSION 2.8)
+
+set(CMAKE_CXX_FLAGS "-std=c++11")
+
+add_executable(
+ray 
+../src/Camera.cpp 
+../src/Color.cpp
+../src/Object.cpp
+../src/Ray.cpp
+../src/RayTracer.cpp
+../src/Vector.cpp
+../src/main.cpp
+)
