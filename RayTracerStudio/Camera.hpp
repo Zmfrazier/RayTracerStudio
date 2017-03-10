@@ -14,7 +14,7 @@ public:
   Camera() {
     position = Vector(0.0, 0.0, 100.0);
     up = Vector(0.0, 1.0, 0.0);
-    lookAt = Vector(0.0, 0.0, 0.0);
+    pointedAt = Vector(0.0, 0.0, 0.0);
     screenWidth = 1000;
 
     calculateWUV();
@@ -29,9 +29,9 @@ public:
     :
     position(p), 
     up(u), 
-    lookAt(l), 
+    pointedAt(l), 
     screenWidth(s) 
-    {calculateWUV();}
+    { calculateWUV(); }
 
   void
   calculateWUV();

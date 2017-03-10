@@ -2,7 +2,7 @@
 #define __RAY_HPP__
 
 #include <stdlib.h>
-#include "Vector.h"
+#include "Vector.hpp"
 
 class Material;
 

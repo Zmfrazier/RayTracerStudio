@@ -1,5 +1,9 @@
 #ifndef __RAY_TRACER_HPP__
 #define __RAY_TRACER_HPP__
+#include <vector>
+
+class Object;
+class Light;
 
 class RayTracer{
 public:
@@ -13,10 +17,10 @@ public:
   std::vector<Light*> lights;
 
   void
-  addObject(*Object);
+  addObject(Object*);
 
   void
-  addLight(*Light);
+  addLight(Light*);
 
   RayTracer();
   ~RayTracer();

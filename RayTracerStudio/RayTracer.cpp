@@ -6,6 +6,6 @@ RayTracer::addObject(Object* object){
 }
 
 void
-RayTracer::addLight(*Light light){
+RayTracer::addLight(Light* light){
   lights.push_back(light);
 }
