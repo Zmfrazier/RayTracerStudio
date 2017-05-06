@@ -1,17 +1,14 @@
 #ifndef __Primitives_H
 #define __Primitives_H
 
-//a Point with three float numbers indicating its location in 3d world
 struct Point {
 	float x, y, z;
 };
 
-//Color structure with three float numbers indicating values
 struct Color {
     float red, green, blue;
 };
 
-//a 3d vector with three float numbers indicating its values in three dimentions
 struct Vector {
 	float x, y, z;
 };
