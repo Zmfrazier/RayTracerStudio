@@ -1,0 +1,103 @@
+Scene 
+{
+  Image.Width = 1280; 
+  Image.Height = 960;   
+  
+  NumberOfMaterials = 2; 
+  NumberOfSpheres = 2;
+  NumberOfLights = 1; 
+  NumberOfPlanes = 1;
+}
+
+Material0
+{
+  Diffuse = 0.0, 0.0, 2.0;
+  Reflection = 0.0;
+  Specular = 0.2;
+  Power = 4.0;
+}
+
+Material1
+{
+  Diffuse = 1.0, 1.0, 0.0;
+  Reflection = 0.3;
+  Specular = 1.0;
+  Power = 0.0;
+}
+
+Sphere0
+{
+  Center = 640, 480, 0.0;  
+  Size = 70.0;
+  Material.Id = 0;
+}
+
+Sphere1
+{
+  Center = 552.5, 326.4, 0.0;
+  Size = 50.0;
+  Material.Id = 1;
+}
+
+Sphere2
+{
+  Center = 727.5, 626.4, 0.0;  
+  Size = 30.0;
+  Material.Id = 1;
+}
+
+Sphere3
+{
+  Center = 640.0, 325.0, 0.0;  
+  Size = 175;
+  Material.Id = 0;
+}
+
+Sphere4
+{
+  Center = 515.0, 696.5, 0.0;  
+  Size = 50.0;
+  Material.Id = 1;
+}
+
+Sphere5
+{
+  Center = 765.0, 263.5, 0.0;  
+  Size = 50.0;
+  Material.Id = 0;
+}
+
+Sphere6
+{
+  Center = 515.0, 263.5, 0.0;  
+  Size = 50.0;
+  Material.Id = 1;
+}
+
+Plane0
+{
+  Point = 640.0, 480.0, 0.0;
+  Normal = -0.0, 0.0, -1.0;
+  Material.Id = 1;
+}
+
+Light0
+{
+  Position = 1040.0, 240.0, -270.0; 
+  Intensity = 1.0, 1.0, 1.0;
+}
+
+Light1
+{
+  Position = 0.0, 240.0, -450.0;  
+  Intensity = 0.7, 0.7, 0.7 ;
+}
+
+Camera
+{
+	Horizontal = 0.0;
+	Vertical = 0.0;
+	Depth = 0.0;
+	Rotate = 0.0, -0, -0;
+}
+
