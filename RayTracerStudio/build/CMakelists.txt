@@ -10,4 +10,5 @@ ray
 ../src/SceneConfiguration.cpp
 ../src/Primitives.hpp
 ../src/Primitives.cpp
+../src/Scene.cpp
 )
