@@ -1,5 +1,6 @@
-#ifndef __Primitives_H
-#define __Primitives_H
+#ifndef __PRIMITIVES_HPP
+#define __PRIMITIVES_HPP
+#include <vector>
 
 struct Point {
 	float x, y, z;
@@ -12,6 +13,57 @@ struct Color {
 struct Vector {
 	float x, y, z;
 };
+
+struct Material {
+    float reflection;
+	float red, green, blue;
+	float power;
+	float specular;
+};
+
+struct Sphere {
+	Point pos;
+	float size;
+	int materialId;
+};
+
+struct Plane {
+    Point pos;
+    Vector normal;
+    int materialId;
+};
+
+struct Light {
+	Point pos;
+	Color intensity;
+};
+
+struct Ray {
+	Point start;
+	Vector dir;
+};
+
+struct Camera{
+    float Horizontal;
+    float Vertical;
+    float Depth;
+    Vector Rotate;
+};
+
+struct Scene {
+    std::vector<Material> Materials;
+    std::vector<Sphere>   Spheres;
+    std::vector<Plane>    Planes;
+    std::vector<Light>    Lights;
+
+    int width, height;
+
+    Camera Cam;
+};
+
+bool Initialize(char* InputName, Scene &MyScene);
+
+#define invsqrtf(x) ((1.0f) / sqrtf(x))
 
 Point 
 operator + (const Point& p, const Vector& v);
@@ -44,6 +96,6 @@ Color
 operator + (const Color& c1, const Color& c2 );
 
 Color 
-operator * (float coef, const Color& c );
+operator * (float coefficient, const Color& c );
 
 #endif 

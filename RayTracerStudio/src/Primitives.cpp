@@ -1,67 +1,101 @@
-#include "Primitives.hpp"
+#ifndef __PRIMITIVES_HPP
+#define __PRIMITIVES_HPP
+#include <vector>
+
+struct Point {
+	float x, y, z;
+};
+
+struct Color {
+    float red, green, blue;
+};
+
+struct Vector {
+	float x, y, z;
+};
+
+struct Material {
+    float reflection;
+	float red, green, blue;
+	float power;
+	float specular;
+};
+
+struct Sphere {
+	Point pos;
+	float size;
+	int materialId;
+};
+
+struct Plane {
+    Point pos;
+    Vector normal;
+    int materialId;
+};
+
+struct Light {
+	Point pos;
+	Color intensity;
+};
+
+struct Ray {
+	Point start;
+	Vector dir;
+};
+
+struct Camera{
+    float Horizontal;
+    float Vertical;
+    float Depth;
+    Vector Rotate;
+};
+
+struct Scene {
+    std::vector<Material> Materials;
+    std::vector<Sphere>   Spheres;
+    std::vector<Plane>    Planes;
+    std::vector<Light>    Lights;
+
+    int width, height;
+
+    Camera Cam;
+};
+
+bool Initialize(char* InputName, Scene &MyScene);
+
+#define invsqrtf(x) ((1.0f) / sqrtf(x))
 
 Point 
-operator + (const Point& p, const Vector& v){
-	Point p2 = {p.x + v.x, p.y + v.y, p.z + v.z };
-	return p2;
-}
+operator + (const Point& p, const Vector& v);
 
 Point 
-operator - (const Point& p, const Vector& v){
-	Point p2 = {p.x - v.x, p.y - v.y, p.z - v.z };
-	return p2;
-}
+operator - (const Point& p, const Vector& v);
 
 Vector 
-operator + (const Vector& v1, const Vector& v2){
-	Vector v = {v1.x + v2.x, v1.y + v2.y, v1.z + v2.z };
-	return v;
-}
+operator + (const Vector& v1, const Vector& v2);
 
 Vector 
-operator - (const Point& p1, const Point& p2){
-	Vector v = {p1.x - p2.x, p1.y - p2.y, p1.z - p2.z };
-	return v;
-}
+operator - (const Point& p1, const Point& p2);
 
 Vector 
-operator * (float c, const Vector& v)
-{
-	Vector v2 = {v.x * c, v.y * c, v.z * c};
-	return v2;
-}
+operator * (float c, const Vector& v);
 
 Vector 
-operator - (const Vector& v1, const Vector& v2){
-	Vector v = {v1.x - v2.x, v1.y - v2.y, v1.z - v2.z };
-	return v;
-}
+operator - (const Vector& v1, const Vector& v2);
 
 float 
-operator * (const Vector& v1, const Vector& v2 ) {
-	return v1.x * v2.x + v1.y * v2.y + v1.z * v2.z;
-}
+operator * (const Vector& v1, const Vector& v2 );
 
 Vector 
-operator ^ (const Vector& v1, const Vector& v2) {
-    Vector v = {v1.y * v2.z - v1.z * v2.y, v1.z * v2.x - v1.x * v2.z, v1.x * v2.y - v1.y * v2.x};
-    return v;
-}
+operator ^ (const Vector& v1, const Vector& v2);
 
 Color 
-operator * (const Color& c1, const Color& c2 ) {
-	Color c = {c1.red * c2.red, c1.green * c2.green, c1.blue * c2.blue};
-	return c;
-}
+operator * (const Color& c1, const Color& c2 );
 
 Color 
-operator + (const Color&c1, const Color &c2 ) {
-	Color c = {c1.red + c2.red, c1.green + c2.green, c1.blue + c2.blue};
-	return c;
-}
+operator + (const Color& c1, const Color& c2 );
 
 Color 
-operator * (float coef, const Color &c ) {
-	Color c2 = {c.red * coef, c.green * coef, c.blue * coef};
-	return c2;
-}
+operator * (float coefficient, const Color& c );
+
+#endif 
